@@ -17,15 +17,15 @@ public class Complex {
 	
 	public static Complex mult(Complex n1, Complex n2) {
 		double fReal, fImag;
-		if(n1.imag == 0 && n1.imag != 0) {
+		if(n1.imag == 0.0 && n2.imag != 0.0) {
 			fReal = n1.real * n2.real;
 			fImag = n1.real * n2.imag;
 		}
-		if(n1.imag != 0 && n1.imag == 0) {
+		if(n1.imag != 0 && n2.imag == 0) {
 			fReal = n1.real * n2.real;
 			fImag = n1.imag * n2.real;
 		}
-		if(n1.imag == 0 && n1.imag == 0) {
+		if(n1.imag == 0 && n2.imag == 0) {
 			fReal = n1.real * n2.real;
 			fImag = 0;
 		}
@@ -38,6 +38,9 @@ public class Complex {
 	}
 	
 	public String toString() {
+		if(imag == 0) return String.format("%s", real);
+		if(imag <  0) return String.format("%s%si", real, imag);
+		if(real == 0) return String.format("%si", imag);
 		return String.format("%s+%si", real, imag);
 	}
 }
