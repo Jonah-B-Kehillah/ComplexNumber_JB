@@ -9,6 +9,11 @@ public class Complex {
 		this.real = real.doubleValue();
 		this.imag = imag.doubleValue();
 	}
+	
+	/**
+	 * Creates a new instance of Polynomial() with only a real number value (i.e {@code (n+0i)})
+	 * @param real The real number value to be assigned to the polynomial
+	 */
 	@SuppressWarnings("RedundantCast")
 	public Complex(Number real) {
 		this.real = real.doubleValue();
@@ -19,29 +24,53 @@ public class Complex {
 		return (real == o.real && imag == o.imag);
 	}
 	
+	/**
+	 * Adds complex number n to this instance of Complex
+	 * @see Complex#add(Complex, Complex)
+	 */
 	public void add(Complex n) {
 		Complex nv = Complex.add(this, n);
 		this.real = nv.real;
 		this.imag = nv.imag;
 	}
+	/**
+	 * Subtracts complex number n from this instance of Complex
+	 * @see Complex#sub(Complex, Complex)
+	 */
+	@SuppressWarnings("unused")
 	public void sub(Complex n) {
 		Complex nv = Complex.sub(this, n);
 		this.real = nv.real;
 		this.imag = nv.imag;
 	}
+	/**
+	 * Multiplies complex number n with this instance of Complex
+	 * @see Complex#mult(Complex, Complex)
+	 */
+	@SuppressWarnings("unused")
 	public void mult(Complex n) {
 		Complex nv = Complex.mult(this, n);
 		this.real = nv.real;
 		this.imag = nv.imag;
 	}
 	
+	/** Adds complex numbers {@code n1} and {@code n2}
+	 * @return the result of the addition */
 	public static Complex add(Complex n1, Complex n2) {
 		return new Complex(n1.real + n2.real, n1.imag + n2.imag);
 	}
+	/** Subtracts complex number {@code n2} from complex number {@code n1}
+	 * @return the result of the subtraction */
 	public static Complex sub(Complex n1, Complex n2) {
 		return new Complex(n1.real - n2.real, n1.imag - n2.imag);
 	}
 	
+	/**
+	 * Multiplies two complex numbers with each other
+	 * @param n1 The first complex number to multiply
+	 * @param n2 The second complex number to multiply
+	 * @return A new complex number; the result of {@code n1} and {@code n2} multiplied
+	 */
 	public static Complex mult(Complex n1, Complex n2) {
 		double fReal, fImag;
 		if(n1.imag == 0.0 && n2.imag != 0.0) { // n1 is real, n2 is not real
@@ -68,6 +97,7 @@ public class Complex {
 	 * Divides complex number n1 by complex number n2
 	 * @param n1 The numerator
 	 * @param n2 THe denominator
+	 * @return {@code n1} divided by {@code n2} as a new Complex()
 	 */
 	public static Complex div(Complex n1, Complex n2) {
 		double n2realSq = 0.0;
@@ -92,6 +122,7 @@ public class Complex {
 	 * Raises complex number n1 to the power of complex number n2
 	 * @param n1 The imaginary number
 	 * @param n2 The imaginary exponent
+	 * @return {@code n1} raised to the power of {@code n2} as a new Complex()
 	 */
 	@SuppressWarnings({"DuplicateExpressions", "DuplicatedCode"})
 	public static Complex pow(Complex n1, Complex n2) {

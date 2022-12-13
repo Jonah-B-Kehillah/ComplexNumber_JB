@@ -41,7 +41,7 @@ public class Polynomial {
 	}
 	
 	/**
-	 * @see Polynomial#evaluate(Complex) 
+	 * @see Polynomial#evaluate(Complex)
 	 */
 	@SuppressWarnings("unused")
 	public Complex evaluate(Number r, Number i) {
