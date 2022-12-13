@@ -27,5 +27,11 @@ public class Polynomial {
 		}
 		return retVal;
 	}
+	public Complex evaluate(Number x) {
+		return this.evaluate(new Complex(2));
+	}
+	public Complex evaluate(Number r, Number i) {
+		return this.evaluate(new Complex(r,i));
+	}
 	
 }

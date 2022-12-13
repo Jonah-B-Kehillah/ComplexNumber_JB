@@ -9,6 +9,11 @@ public class Complex {
 		this.real = real.doubleValue();
 		this.imag = imag.doubleValue();
 	}
+	@SuppressWarnings("RedundantCast")
+	public Complex(Number real) {
+		this.real = real.doubleValue();
+		this.imag = (double) 0;
+	}
 	
 	public boolean equals(Complex o){
 		return (real == o.real && imag == o.imag);
