@@ -15,6 +15,11 @@ public class Polynomial {
 		}
 	}
 	
+	/**
+	 * Evaluates the polynomial at value x
+	 * @param x The x value to evaluate at
+	 * @return The result of evaluating the polynomial at x
+	 */
 	public Complex evaluate(Complex x) {
 		Complex retVal = new Complex(0,0);
 		retVal.add(terms[0]);
@@ -27,9 +32,18 @@ public class Polynomial {
 		}
 		return retVal;
 	}
+	
+	/**
+	 * @see Polynomial#evaluate(Complex) 
+	 */
 	public Complex evaluate(Number x) {
-		return this.evaluate(new Complex(2));
+		return this.evaluate(new Complex(x));
 	}
+	
+	/**
+	 * @see Polynomial#evaluate(Complex) 
+	 */
+	@SuppressWarnings("unused")
 	public Complex evaluate(Number r, Number i) {
 		return this.evaluate(new Complex(r,i));
 	}
