@@ -1,0 +1,4 @@
+cnFFT[0] transformed correctly
+cnFFT[1] transformed correctly
+cnFFT[2] transformed correctly
+cnFFT[3] transformed correctly
