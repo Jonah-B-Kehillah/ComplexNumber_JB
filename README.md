@@ -1,7 +1,7 @@
 # FourierTransform_JB
 ###### By *Jonah B.*
 A super-project containing both my implementation of a complex `Polynomial()`
-and of the fast fourier transform (in progress)
+and of the fast fourier transform
 
 ## Class and Method List
 - `main`
