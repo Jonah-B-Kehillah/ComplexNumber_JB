@@ -6,6 +6,7 @@ and of the fast fourier transform (in progress)
 ## Class and Method List
 - `main`
   - `Main`
+  - `TestFFT`
 - `numbers`
   - `Complex`
     - `Complex(Number, Number)`
@@ -20,6 +21,8 @@ and of the fast fourier transform (in progress)
     - `static Complex pow(Complex, Complex)`
     - `static Complex powNoRound(Complex, Complex)`
     - `String toString()`
+  - `FFT`
+    - `static Complex[] fft(Complex[])`
   - `Polynomial`
     - `Polynomial(Complex[])`
     - `Complex evaluate(Complex)`
@@ -30,3 +33,5 @@ and of the fast fourier transform (in progress)
 - Mr. Christopher Kuszmaul
 - geeksforgeeks.org
 - GitHub user `cab1729` (division function)
+- [Robert Sedgewick and Kevin Wayne](https://introcs.cs.princeton.edu/java/97data/FFT.java.html)
+  (example FFT function)
