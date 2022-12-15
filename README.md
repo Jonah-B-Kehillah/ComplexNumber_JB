@@ -32,6 +32,6 @@ and of the fast fourier transform
 ## Acknowledgements
 - Mr. Christopher Kuszmaul
 - geeksforgeeks.org
-- GitHub user `cab1729` (division function)
+- GitHub user `cab1729` (division and power function)
 - [Robert Sedgewick and Kevin Wayne](https://introcs.cs.princeton.edu/java/97data/FFT.java.html)
   (example FFT function)
